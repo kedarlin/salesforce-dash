@@ -194,15 +194,17 @@ body {
     align-items: center;
     gap: 15px;
 }
-.order-filter{
-    /* all: unset; */
+.order-filter, .order-filter1{
     padding: 10px 20px;
     font-size: 18px;
     background-color: #fff;
     border: none;
     border-radius: 10px;
     min-height: 25px;
-    width: 15   0px;
+    min-width: 150px;
+}
+.order-filter1{
+    padding: 12px 20px;
 }
 .order-title {
     margin: 0;

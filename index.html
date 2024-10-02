@@ -92,7 +92,15 @@
           <h3 class="order-title">Orders</h3>
           <div class="order-filters">
             <input type="date" class="order-filter" />
-            <input type="text" class="order-filter" placeholder="Enter a place" />
+            <!-- <input type="text" class="order-filter" placeholder="Enter a place" /> -->
+            <select class="order-filter1">
+              <option value="" disabled selected>Select a place</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Kolkata">Kolkata</option>
+            </select>
           </div>
         </div>
 
@@ -225,7 +233,7 @@
         !floatButtons.contains(event.target)
       ) {
         floatButtons.style.display = "none";
-        floatBar.style.display = "none"
+        floatBar.style.display = "none";
       }
     });
   </script>
