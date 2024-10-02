@@ -164,7 +164,7 @@ body {
 .carousel-img {
     min-width: 100vw;
     /* transform: 1s; */
-    /* object-fit: cover; */
+    object-fit: cover;
     height: 100vh;
 }
 
