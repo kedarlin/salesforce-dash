@@ -201,6 +201,7 @@ body {
     background-color: #fff;
     border: none;
     border-radius: 10px;
+    min-height: 25px;
 }
 .order-title {
     margin: 0;
