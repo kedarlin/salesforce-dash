@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.root{
+    background-color:aquamarine;
+    position: relative;
+}
+.carousel{
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    flex-direction: row;
+}
+.carousel-img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.navbar{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    padding: 10px 0px;
+    background: #cccccc7e;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-img{
+    height: 40px;
+    margin-left: 40px;
+}
+.nav-items{
+    display: flex;
+    flex-direction: row;
+    margin-right: 40px;
+    gap: 16px;
+}
+.nav-item{
+    all: unset;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #024657;
+    color: #fff;
+}
+.nav-item:hover{
+    cursor: pointer;
+    background-color: #02323e;
+}
+
+.float-bar{
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.slide-bar{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 8px 15px;
+    border-radius: 15px;
+    border: #fff solid 1px;
+    background: #8484846d;
+    backdrop-filter: blur(10px);
+}
+.slide-item{
+    all: unset;
+    font-size: 12px;
+    color: #fff;
+}
+.float-button{
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.add-btn{
+    width: 20px;
+}
