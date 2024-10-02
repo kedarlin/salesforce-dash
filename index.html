@@ -7,17 +7,11 @@
 
   <body>
     <div class="root">
-      <div class="carousel">
-        <img src="image.png" alt="carousel-img" class="carousel-img" />
-        <img src="image.png" alt="carousel-img" class="carousel-img" />
-        <img src="image.png" alt="carousel-img" class="carousel-img" />
-        <img src="image.png" alt="carousel-img" class="carousel-img" />
-      </div>
       <div class="navbar">
         <img src="nav-img.png" alt="navbar-img" class="nav-img" />
         <div class="nav-items">
-          <li class="nav-item">Home</li>
-          <li class="nav-item">Orders</li>
+          <li class="nav-item" id="home">Home</li>
+          <li class="nav-item" id="orders">Orders</li>
           <li class="nav-item">Invoices</li>
           <li class="nav-item">Payments</li>
           <li class="nav-item">Seco Sales</li>
@@ -36,9 +30,75 @@
           Actions
         </button>
       </div>
+
+      <!-- Layout 1 -->
+      <div class="carousel" id="carousel">
+        <img src="image.png" alt="carousel-img" class="carousel-img" />
+        <img src="image.png" alt="carousel-img" class="carousel-img" />
+        <img src="image.png" alt="carousel-img" class="carousel-img" />
+        <img src="image.png" alt="carousel-img" class="carousel-img" />
+      </div>
+
+      <!-- Layout 2 -->
+      <div class="orders" id="ordersLayout" style="display: none">
+        Orders
+
+        <table class="contacts-table">
+          <tr>
+            <th>selected Contacts</th>
+            <th>Mobile</th>
+            <th>Company</th>
+            <th>Place</th>
+            <th>Pincode</th>
+          </tr>
+          <tr>
+            <td class="contacts-col">jsigma1234</td>
+            <td class="contacts-col">12983810203</td>
+            <td class="contacts-col">ABC</td>
+            <td class="contacts-col">Chennai</td>
+            <td class="contacts-col">600 115</td>
+          </tr>
+          <tr>
+            <td class="contacts-col">jsigma1234</td>
+            <td class="contacts-col">12983810203</td>
+            <td class="contacts-col">ABC</td>
+            <td class="contacts-col">Chennai</td>
+            <td class="contacts-col">600 115</td>
+          </tr>
+          <tr>
+            <td class="contacts-col">jsigma1234</td>
+            <td class="contacts-col">12983810203</td>
+            <td class="contacts-col">ABC</td>
+            <td class="contacts-col">Chennai</td>
+            <td class="contacts-col">600 115</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </body>
   <script>
+    //Layout changess here
+
+    const carousel = document.getElementById("carousel");
+    const ordersLayout = document.getElementById("ordersLayout");
+    const homeButton = document.getElementById("home");
+    const ordersButton = document.getElementById("orders");
+
+    function showHome() {
+      carousel.style.display = "flex";
+      ordersLayout.style.display = "none";
+    }
+
+    function showOrders() {
+      carousel.style.display = "none";
+      ordersLayout.style.display = "flex";
+      console.log("Kedar");
+    }
+
+    homeButton.addEventListener("click", showHome);
+    ordersButton.addEventListener("click", showOrders);
+
+    showHome();
 
     // Carousel Effect
     // const carousel = document.querySelector(".carousel");
@@ -52,7 +112,6 @@
     // }
 
     // setInterval(slideToNext, 3000);
-
 
     // Slide Bar Buttons
     // const slideItems = document.querySelectorAll(".slide-item");
