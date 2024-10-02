@@ -56,7 +56,7 @@ body {
 .nav-item {
     all: unset;
     padding: 10px 16px;
-    border-radius: 8px;
+    border-radius: 15px;
     font-size: 18px;
     background-color: var(--navbar-item-bg-color);
     color: #fff;
