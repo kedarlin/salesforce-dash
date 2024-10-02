@@ -17,44 +17,48 @@
           <li class="nav-item">Seco Sales</li>
         </div>
       </div>
-      <div class="float-bar">
-        <div class="slide-bar">
-          <li class="slide-item selected">Offers</li>
-          <li class="slide-item">Payments</li>
-          <li class="slide-item">Schemes</li>
-          <li class="slide-item">Announcements</li>
-          <li class="slide-item">Reports</li>
+      <div class="float">
+        <div class="float-bar">
+          <div class="slide-bar">
+            <li class="slide-item selected">Offers</li>
+            <li class="slide-item">Payments</li>
+            <li class="slide-item">Schemes</li>
+            <li class="slide-item">Announcements</li>
+            <li class="slide-item">Reports</li>
+          </div>
+          <div class="float-box">
+            <button class="float-button">
+              <img src="add-btn.png" alt="add-button" class="add-btn" />
+              Actions
+            </button>
+            <div class="float-buttons">
+              <button class="float-button">
+                <img src="add-btn.png" alt="add-button" class="add-btn" />
+                Actions
+              </button>
+              <button class="float-button">
+                <img src="add-btn.png" alt="add-button" class="add-btn" />
+                Actions
+              </button>
+              <button class="float-button">
+                <img src="add-btn.png" alt="add-button" class="add-btn" />
+                Actions
+              </button>
+              <button class="float-button">
+                <img src="add-btn.png" alt="add-button" class="add-btn" />
+                Actions
+              </button>
+              <button class="float-button">
+                <img src="add-btn.png" alt="add-button" class="add-btn" />
+                Actions
+              </button>
+              <button class="float-button">
+                <img src="add-btn.png" alt="add-button" class="add-btn" />
+                Actions
+              </button>
+            </div>
+          </div>
         </div>
-        <button class="float-button">
-          <img src="add-btn.png" alt="add-button" class="add-btn" />
-          Actions
-        </button>
-      </div>
-      <div class="float-buttons">
-        <button class="float-button">
-          <img src="add-btn.png" alt="add-button" class="add-btn" />
-          Actions
-        </button>
-        <button class="float-button">
-          <img src="add-btn.png" alt="add-button" class="add-btn" />
-          Actions
-        </button>
-        <button class="float-button">
-          <img src="add-btn.png" alt="add-button" class="add-btn" />
-          Actions
-        </button>
-        <button class="float-button">
-          <img src="add-btn.png" alt="add-button" class="add-btn" />
-          Actions
-        </button>
-        <button class="float-button">
-          <img src="add-btn.png" alt="add-button" class="add-btn" />
-          Actions
-        </button>
-        <button class="float-button">
-          <img src="add-btn.png" alt="add-button" class="add-btn" />
-          Actions
-        </button>
       </div>
 
       <!-- Layout 1 -->
@@ -67,7 +71,7 @@
 
       <!-- Layout 2 -->
       <div class="orders" id="ordersLayout" style="display: none">
-        Orders
+        <h3 class="order-title">Orders</h3>
 
         <table class="contacts-table">
           <tr>
@@ -98,11 +102,33 @@
             <td class="contacts-col">Chennai</td>
             <td class="contacts-col">600 115</td>
           </tr>
+          <tr>
+            <td class="contacts-col">jsigma1234</td>
+            <td class="contacts-col">12983810203</td>
+            <td class="contacts-col">ABC</td>
+            <td class="contacts-col">Chennai</td>
+            <td class="contacts-col">600 115</td>
+          </tr>
+          <tr>
+            <td class="contacts-col">jsigma1234</td>
+            <td class="contacts-col">12983810203</td>
+            <td class="contacts-col">ABC</td>
+            <td class="contacts-col">Chennai</td>
+            <td class="contacts-col">600 115</td>
+          </tr>
+          <tr>
+            <td class="contacts-col">jsigma1234</td>
+            <td class="contacts-col">12983810203</td>
+            <td class="contacts-col">ABC</td>
+            <td class="contacts-col">Chennai</td>
+            <td class="contacts-col">600 115</td>
+          </tr>
         </table>
       </div>
     </div>
   </body>
   <script>
+    
     //Layout changess here
 
     const carousel = document.getElementById("carousel");
@@ -113,11 +139,15 @@
     function showHome() {
       carousel.style.display = "flex";
       ordersLayout.style.display = "none";
+      homeButton.style.backgroundColor = "#2b6b75";
+      ordersButton.style.backgroundColor = "#024657";
     }
-
+    
     function showOrders() {
       carousel.style.display = "none";
       ordersLayout.style.display = "flex";
+      homeButton.style.backgroundColor = "#024657";
+      ordersButton.style.backgroundColor = "#2b6b75";
       console.log("Kedar");
     }
 
@@ -154,10 +184,17 @@
 
     const floatButton = document.querySelector(".float-button");
     const floatButtons = document.querySelector(".float-buttons");
+    const floatBar = document.querySelector(".float");
 
     floatButton.addEventListener("click", () => {
-      floatButtons.style.display =
-        floatButtons.style.display === "flex" ? "none" : "flex";
+      if(floatButtons.style.display === "flex"){
+        floatButtons.style.display = "none";
+        floatBar.style.backgroundColor = "none"
+      }
+      else{
+        floatButtons.style.display = "flex";
+        floatBar.style.backgroundColor = "#8484846d"
+      }
     });
   </script>
 </html>
