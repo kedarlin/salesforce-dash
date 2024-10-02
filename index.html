@@ -9,7 +9,9 @@
     <div class="root">
       <div class="carousel">
         <img src="image.png" alt="carousel-img" class="carousel-img" />
-        <!-- <img src="image.png" alt="carousel-img" class="carousel-img"/> -->
+        <img src="image.png" alt="carousel-img" class="carousel-img" />
+        <img src="image.png" alt="carousel-img" class="carousel-img" />
+        <img src="image.png" alt="carousel-img" class="carousel-img" />
       </div>
       <div class="navbar">
         <img src="nav-img.png" alt="navbar-img" class="nav-img" />
@@ -37,14 +39,30 @@
     </div>
   </body>
   <script>
-    const slideItems = document.querySelectorAll(".slide-item");
 
-    slideItems.forEach((item) => {
-      item.addEventListener("click", function () {
-        slideItems.forEach((i) => i.classList.remove("selected"));
+    // Carousel Effect
+    // const carousel = document.querySelector(".carousel");
+    // const images = document.querySelectorAll(".carousel-img");
+    // let currentIndex = 0;
+    // const totalImages = images.length;
 
-        this.classList.add("selected");
-      });
-    });
+    // function slideToNext() {
+    //   currentIndex = (currentIndex + 1) % totalImages;
+    //   carousel.style.transform = `translateX(-${currentIndex * 100}vw)`;
+    // }
+
+    // setInterval(slideToNext, 3000);
+
+
+    // Slide Bar Buttons
+    // const slideItems = document.querySelectorAll(".slide-item");
+
+    // slideItems.forEach((item) => {
+    //   item.addEventListener("click", function () {
+    //     slideItems.forEach((i) => i.classList.remove("selected"));
+
+    //     this.classList.add("selected");
+    //   });
+    // });
   </script>
 </html>

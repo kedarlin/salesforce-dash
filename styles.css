@@ -7,15 +7,19 @@ body{
     position: relative;
     /* font-weight: 600; */
 }
-.carousel{
+.carousel {
     display: flex;
-    flex-direction: row;
-}
-.carousel-img{
+    overflow: hidden;
     width: 100vw;
-    height: 100vh;
-    object-fit: cover;
 }
+
+.carousel-img {
+    min-width: 100vw;
+    transition: transform 0.5s ease-in-out;
+    object-fit: cover;
+    height: 100vh;
+}
+
 .navbar{
     position: absolute;
     z-index: 10;
