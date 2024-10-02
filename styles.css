@@ -1,51 +1,69 @@
-body{
+:root {
+    --root-bg-color: #76c7b8;
+    --slide-item-bg-color: #024657;
+    --navbar-bg-color: #8484846d;
+    --navbar-item-bg-color: #024657;
+    --navbar-item-hover-bg-color: #02323e;
+    --selected-bg-color: #fff;
+    --selected-text-color: #02323e;
+    --header-bg-color: #02323e;
+    --table-text-color: #8398c1;
+    --float-button-bg-color: #fff;
+    --float-button-text-color: #858585;
+}
+
+body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.root{
-    background-color: #76c7b8;
+
+.root {
+    background-color: var(--root-bg-color);
     position: relative;
     height: 100vh;
-    /* font-weight: 600; */
 }
 
-.navbar{
+.navbar {
     position: absolute;
     z-index: 10;
     top: 0;
     width: 100%;
     padding: 20px 0px;
-    background: #8484846d;
+    background: var(--navbar-bg-color);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.nav-img{
+
+.nav-img {
     height: 50px;
     margin-left: 60px;
 }
-.nav-items{
+
+.nav-items {
     display: flex;
     flex-direction: row;
     margin-right: 60px;
     gap: 16px;
 }
-.nav-item{
+
+.nav-item {
     all: unset;
     padding: 10px 16px;
     border-radius: 8px;
     font-size: 18px;
-    background-color: #024657;
+    background-color: var(--navbar-item-bg-color);
     color: #fff;
 }
-.nav-item:hover{
+
+.nav-item:hover {
     cursor: pointer;
-    background-color: #02323e;
+    background-color: var(--navbar-item-hover-bg-color);
 }
 
-.float-bar{
+.float-bar {
     width: 100%;
     position: absolute;
     bottom: 40px;
@@ -56,31 +74,32 @@ body{
     gap: 25px;
     z-index: 15;
 }
-.slide-bar{
+
+.slide-bar {
     display: flex;
     flex-direction: row;
     border-radius: 30px;
     border: #fff solid 1px;
-    background: #8484846d;
+    background: var(--navbar-bg-color);
     backdrop-filter: blur(10px);
 }
 
-.slide-item{
+.slide-item {
     all: unset;
     font-size: 18px;
     padding: 12px 25px;
     border-radius: 30px;
     color: #fff;
-    transition: transform 0.3s ease, padding 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease, padding 0.3s ease;
 }
 
-.slide-item:hover{
+.slide-item:hover {
     cursor: pointer;
 }
 
-.selected{
-    background-color: #fff;
-    color: #02323e;
+.selected {
+    background-color: var(--selected-bg-color);
+    color: var(--selected-text-color);
     position: relative;
     padding: 12px 30px;
     z-index: 1;
@@ -88,11 +107,10 @@ body{
     transform: scale(1.15);
 }
 
-.float-button{
-    /* position: relative; */
+.float-button {
     border: none;
-    background-color: #fff;
-    color: #858585;
+    background-color: var(--float-button-bg-color);
+    color: var(--float-button-text-color);
     cursor: pointer;
     padding: 12px 20px;
     font-size: 18px;
@@ -102,7 +120,8 @@ body{
     flex-direction: row;
     align-items: center;
 }
-.add-btn{
+
+.add-btn {
     width: 24px;
 }
 
@@ -112,7 +131,6 @@ body{
     right: 0;
     top: 0;
     bottom: 0;
-    bottom: 0;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -121,8 +139,6 @@ body{
     background-color: #12121257;
 }
 
-
-/* Layout 1 */
 .carousel {
     display: flex;
     overflow: hidden;
@@ -136,8 +152,7 @@ body{
     height: 100vh;
 }
 
-/* Layout 2 */
-.orders{
+.orders {
     position: absolute;
     z-index: 2;
     top: 200px;
@@ -149,6 +164,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .contacts-table {
     width: 80%;
     border-collapse: separate;
@@ -176,14 +192,14 @@ body{
 }
 
 .contacts-table th {
-    background-color: #02323e;
+    background-color: var(--header-bg-color);
     font-weight: 400;
     font-size: 16px;
 }
 
 .contacts-table td {
     font-size: 14px;
-    color: #8398c1;
+    color: var(--table-text-color);
     font-weight: 500;
 }
 
@@ -211,5 +227,5 @@ body{
 .contacts-table tr th:nth-child(3),
 .contacts-table tr th:nth-child(4),
 .contacts-table tr th:nth-child(5) {
-border-left: #fff 1px solid;
+    border-left: #fff 1px solid;
 }
