@@ -30,6 +30,32 @@
           Actions
         </button>
       </div>
+      <div class="float-buttons">
+        <button class="float-button">
+          <img src="add-btn.png" alt="add-button" class="add-btn" />
+          Actions
+        </button>
+        <button class="float-button">
+          <img src="add-btn.png" alt="add-button" class="add-btn" />
+          Actions
+        </button>
+        <button class="float-button">
+          <img src="add-btn.png" alt="add-button" class="add-btn" />
+          Actions
+        </button>
+        <button class="float-button">
+          <img src="add-btn.png" alt="add-button" class="add-btn" />
+          Actions
+        </button>
+        <button class="float-button">
+          <img src="add-btn.png" alt="add-button" class="add-btn" />
+          Actions
+        </button>
+        <button class="float-button">
+          <img src="add-btn.png" alt="add-button" class="add-btn" />
+          Actions
+        </button>
+      </div>
 
       <!-- Layout 1 -->
       <div class="carousel" id="carousel">
@@ -123,5 +149,15 @@
     //     this.classList.add("selected");
     //   });
     // });
+
+    // Toggle button for floating button
+
+    const floatButton = document.querySelector(".float-button");
+    const floatButtons = document.querySelector(".float-buttons");
+
+    floatButton.addEventListener("click", () => {
+      floatButtons.style.display =
+        floatButtons.style.display === "flex" ? "none" : "flex";
+    });
   </script>
 </html>

@@ -54,7 +54,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 25px;
-    z-index: 10;
+    z-index: 15;
 }
 .slide-bar{
     display: flex;
@@ -89,6 +89,7 @@ body{
 }
 
 .float-button{
+    /* position: relative; */
     border: none;
     background-color: #fff;
     color: #858585;
@@ -104,6 +105,22 @@ body{
 .add-btn{
     width: 24px;
 }
+
+.float-buttons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 12;
+    background-color: #12121257;
+}
+
 
 /* Layout 1 */
 .carousel {
@@ -144,7 +161,7 @@ body{
 
 .contacts-table th,
 .contacts-table td {
-    width: 33.3%;
+    width: 20%;
     color: #fff;
     border: none;
     text-align: left;
@@ -191,6 +208,8 @@ body{
 }
 
 .contacts-table tr th:nth-child(2),
-.contacts-table tr th:nth-child(3) {
-    border-left: #fff 1px solid;
+.contacts-table tr th:nth-child(3),
+.contacts-table tr th:nth-child(4),
+.contacts-table tr th:nth-child(5) {
+border-left: #fff 1px solid;
 }
