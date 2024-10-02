@@ -10,7 +10,7 @@
     --selected-bg-color: #fff;
     --selected-text-color: #02323e;
     --header-bg-color: #02323e;
-    --table-text-color: #063DA8;
+    --table-text-color: #404040;
     --float-button-bg-color: #fff;
     --float-button-text-color: #858585;
 }
@@ -188,8 +188,16 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.order-filters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
 .order-filter{
-    padding: 15px;
+    /* all: unset; */
+    padding: 10px 20px;
+    font-size: 18px;
     background-color: #fff;
     border: none;
     border-radius: 10px;
@@ -236,7 +244,7 @@ body {
 .contacts-table td {
     font-size: 14px;
     color: var(--table-text-color);
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 
 .contacts-table tr:first-child th:first-child {
