@@ -17,63 +17,84 @@
           <li class="nav-item">Seco Sales</li>
         </div>
       </div>
-      <div class="float">
-        <div class="float-bar">
-          <div class="slide-bar">
-            <li class="slide-item selected">Offers</li>
-            <li class="slide-item">Payments</li>
-            <li class="slide-item">Schemes</li>
-            <li class="slide-item">Announcements</li>
-            <li class="slide-item">Reports</li>
-          </div>
-          <div class="float-box">
+      <div class="float-bar">
+        <div class="slide-bar">
+          <li class="slide-item selected">Offers</li>
+          <li class="slide-item">Payments</li>
+          <li class="slide-item">Schemes</li>
+          <li class="slide-item">Announcements</li>
+          <li class="slide-item">Reports</li>
+        </div>
+        <div class="float-box">
+          <button class="float-button">
+            <img src="add-btn.png" alt="add-button" class="add-btn" />
+            Actions
+          </button>
+          <div class="float-buttons">
             <button class="float-button">
               <img src="add-btn.png" alt="add-button" class="add-btn" />
               Actions
             </button>
-            <div class="float-buttons">
-              <button class="float-button">
-                <img src="add-btn.png" alt="add-button" class="add-btn" />
-                Actions
-              </button>
-              <button class="float-button">
-                <img src="add-btn.png" alt="add-button" class="add-btn" />
-                Actions
-              </button>
-              <button class="float-button">
-                <img src="add-btn.png" alt="add-button" class="add-btn" />
-                Actions
-              </button>
-              <button class="float-button">
-                <img src="add-btn.png" alt="add-button" class="add-btn" />
-                Actions
-              </button>
-              <button class="float-button">
-                <img src="add-btn.png" alt="add-button" class="add-btn" />
-                Actions
-              </button>
-              <button class="float-button">
-                <img src="add-btn.png" alt="add-button" class="add-btn" />
-                Actions
-              </button>
-            </div>
+            <button class="float-button">
+              <img src="add-btn.png" alt="add-button" class="add-btn" />
+              Actions
+            </button>
+            <button class="float-button">
+              <img src="add-btn.png" alt="add-button" class="add-btn" />
+              Actions
+            </button>
+            <button class="float-button">
+              <img src="add-btn.png" alt="add-button" class="add-btn" />
+              Actions
+            </button>
+            <button class="float-button">
+              <img src="add-btn.png" alt="add-button" class="add-btn" />
+              Actions
+            </button>
+            <button class="float-button">
+              <img src="add-btn.png" alt="add-button" class="add-btn" />
+              Actions
+            </button>
           </div>
         </div>
       </div>
+      <div class="float-bg-drop"></div>
 
       <!-- Layout 1 -->
       <div class="carousel-wrapper">
         <div class="carousel" id="carousel">
-          <img src="carousel-img-1.png" alt="carousel-img" class="carousel-img" />
-          <img src="carousel-img-2.png" alt="carousel-img" class="carousel-img" />
-          <img src="carousel-img-3.png" alt="carousel-img" class="carousel-img" />
-          <img src="carousel-img-4.png" alt="carousel-img" class="carousel-img" />
+          <img
+            src="carousel-img-1.png"
+            alt="carousel-img"
+            class="carousel-img"
+          />
+          <img
+            src="carousel-img-2.png"
+            alt="carousel-img"
+            class="carousel-img"
+          />
+          <img
+            src="carousel-img-3.png"
+            alt="carousel-img"
+            class="carousel-img"
+          />
+          <img
+            src="carousel-img-4.png"
+            alt="carousel-img"
+            class="carousel-img"
+          />
         </div>
       </div>
 
       <!-- Layout 2 -->
       <div class="orders" id="ordersLayout" style="display: none">
-        <h3 class="order-title">Orders</h3>
+        <div class="order-head">
+          <h3 class="order-title">Orders</h3>
+          <div class="order-filters">
+            <input type="date" class="order-filter" />
+            <input type="date" class="order-filter" />
+          </div>
+        </div>
 
         <table class="contacts-table">
           <tr>
@@ -184,16 +205,16 @@
 
     const floatButton = document.querySelector(".float-button");
     const floatButtons = document.querySelector(".float-buttons");
-    const floatBar = document.querySelector(".float");
+    const floatBar = document.querySelector(".float-bg-drop");
 
     floatButton.addEventListener("click", (event) => {
       event.stopPropagation();
       if (floatButtons.style.display === "flex") {
-        floatBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
         floatButtons.style.display = "none";
+        floatBar.style.display = "none";
       } else {
         floatButtons.style.display = "flex";
-        floatBar.style.backgroundColor = "#8484846d";
+        floatBar.style.display = "block";
       }
     });
 
@@ -203,11 +224,9 @@
         !floatButton.contains(event.target) &&
         !floatButtons.contains(event.target)
       ) {
-        floatBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
         floatButtons.style.display = "none";
+        floatBar.style.display = "none"
       }
     });
-
-
   </script>
 </html>
