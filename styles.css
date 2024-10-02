@@ -5,6 +5,7 @@ body{
 .root{
     background-color:aquamarine;
     position: relative;
+    /* font-weight: 600; */
 }
 .carousel{
     display: flex;
@@ -64,18 +65,35 @@ body{
 .slide-bar{
     display: flex;
     flex-direction: row;
-    gap: 36px;
-    padding: 18px 40px;
     border-radius: 30px;
     border: #fff solid 1px;
     background: #8484846d;
     backdrop-filter: blur(10px);
 }
+
 .slide-item{
-    font-size: 18px;
     all: unset;
+    font-size: 18px;
+    padding: 12px 25px;
+    border-radius: 30px;
     color: #fff;
+    transition: transform 0.3s ease, padding 0.3s ease; /* Smooth transition */
 }
+
+.slide-item:hover{
+    cursor: pointer;
+}
+
+.selected{
+    background-color: #fff;
+    color: #02323e;
+    position: relative;
+    padding: 12px 30px;
+    z-index: 1;
+    font-size: 16px;
+    transform: scale(1.15);
+}
+
 .float-button{
     border: none;
     background-color: #fff;
