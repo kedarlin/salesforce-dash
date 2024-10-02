@@ -1,7 +1,10 @@
 :root {
     --root-bg-color: #76c7b8;
+    --root-bg-linear-gradient: linear-gradient(90deg, #A3D7CB 0%, #3A9283 100%),
+        linear-gradient(252.8deg, rgba(165, 216, 207, 0.8) 0%, rgba(164, 216, 204, 0.8) 99.49%);
+    --root-bg-image: url("bg-img.png");
     --slide-item-bg-color: #024657;
-    --navbar-bg-color: #8484846d;
+    --navbar-bg-color: #84848492;
     --navbar-item-bg-color: #024657;
     --navbar-item-hover-bg-color: #02323e;
     --selected-bg-color: #fff;
@@ -18,9 +21,10 @@ body {
 }
 
 .root {
-    background-color: var(--root-bg-color);
+    /* background-color: var(--root-bg-color); */
     position: relative;
     height: 100vh;
+    background: var(--root-bg-linear-gradient), var(--root-bg-image);
 }
 
 .navbar {
@@ -62,6 +66,7 @@ body {
     cursor: pointer;
     background-color: var(--navbar-item-hover-bg-color);
 }
+
 .float {
     width: 100%;
     position: absolute;
@@ -116,7 +121,7 @@ body {
     transform: scale(1.15);
 }
 
-.float-button{
+.float-button {
     border: none;
     background-color: var(--float-button-bg-color);
     color: var(--float-button-text-color);
@@ -144,16 +149,21 @@ body {
     z-index: 12;
 }
 
+.carousel-wrapper {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
 .carousel {
     display: flex;
-    overflow: hidden;
-    width: 100vw;
+    width: 100%;
 }
 
 .carousel-img {
     min-width: 100vw;
-    transition: transform 0.5s ease-in-out;
-    object-fit: cover;
+    /* transform: 1s; */
+    /* object-fit: cover; */
     height: 100vh;
 }
 
@@ -169,13 +179,15 @@ body {
     justify-content: center;
     align-items: center;
 }
-.order-title{
+
+.order-title {
     margin: 20px 0;
     width: 80%;
     text-align: left;
     font-size: 32px;
     color: #02323e;
 }
+
 .contacts-table {
     width: 80%;
     border-collapse: separate;

@@ -62,11 +62,13 @@
       </div>
 
       <!-- Layout 1 -->
-      <div class="carousel" id="carousel">
-        <img src="image.png" alt="carousel-img" class="carousel-img" />
-        <img src="image.png" alt="carousel-img" class="carousel-img" />
-        <img src="image.png" alt="carousel-img" class="carousel-img" />
-        <img src="image.png" alt="carousel-img" class="carousel-img" />
+      <div class="carousel-wrapper">
+        <div class="carousel" id="carousel">
+          <img src="carousel-img-1.png" alt="carousel-img" class="carousel-img" />
+          <img src="carousel-img-2.png" alt="carousel-img" class="carousel-img" />
+          <img src="carousel-img-3.png" alt="carousel-img" class="carousel-img" />
+          <img src="carousel-img-4.png" alt="carousel-img" class="carousel-img" />
+        </div>
       </div>
 
       <!-- Layout 2 -->
@@ -128,7 +130,6 @@
     </div>
   </body>
   <script>
-
     //Layout changess here
 
     const carousel = document.getElementById("carousel");
@@ -142,13 +143,12 @@
       homeButton.style.backgroundColor = "#2b6b75";
       ordersButton.style.backgroundColor = "#024657";
     }
-    
+
     function showOrders() {
       carousel.style.display = "none";
       ordersLayout.style.display = "flex";
       homeButton.style.backgroundColor = "#024657";
       ordersButton.style.backgroundColor = "#2b6b75";
-      console.log("Kedar");
     }
 
     homeButton.addEventListener("click", showHome);
@@ -158,16 +158,16 @@
 
     // Carousel Effect
     // const carousel = document.querySelector(".carousel");
-    // const images = document.querySelectorAll(".carousel-img");
-    // let currentIndex = 0;
-    // const totalImages = images.length;
+    const images = document.querySelectorAll(".carousel-img");
+    let currentIndex = 0;
+    const totalImages = images.length;
 
-    // function slideToNext() {
-    //   currentIndex = (currentIndex + 1) % totalImages;
-    //   carousel.style.transform = `translateX(-${currentIndex * 100}vw)`;
-    // }
+    function slideToNext() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      carousel.style.transform = `translateX(-${currentIndex * 100}vw)`;
+    }
 
-    // setInterval(slideToNext, 3000);
+    setInterval(slideToNext, 3000);
 
     // Slide Bar Buttons
     // const slideItems = document.querySelectorAll(".slide-item");
@@ -186,15 +186,28 @@
     const floatButtons = document.querySelector(".float-buttons");
     const floatBar = document.querySelector(".float");
 
-    floatButton.addEventListener("click", () => {
-      if(floatButtons.style.display === "flex"){
-        floatBar.style.backgroundColor = "rgba(0, 0, 0, 0)"
+    floatButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+      if (floatButtons.style.display === "flex") {
+        floatBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
         floatButtons.style.display = "none";
-      }
-      else{
+      } else {
         floatButtons.style.display = "flex";
-        floatBar.style.backgroundColor = "#8484846d"
+        floatBar.style.backgroundColor = "#8484846d";
       }
     });
+
+    // Close the floating buttons and reset background when clicking outside
+    document.addEventListener("click", (event) => {
+      if (
+        !floatButton.contains(event.target) &&
+        !floatButtons.contains(event.target)
+      ) {
+        floatBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+        floatButtons.style.display = "none";
+      }
+    });
+
+
   </script>
 </html>
