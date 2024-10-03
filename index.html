@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Dashboard</title>
   </head>
-
   <body>
     <div class="root">
       <div class="navbar">
@@ -159,7 +158,9 @@
     </div>
   </body>
   <script>
-    //Layout changess here
+
+
+    //Navbar Layout changes here
 
     const carousel = document.getElementById("carousel");
     const ordersLayout = document.getElementById("ordersLayout");
@@ -185,7 +186,7 @@
 
     showHome();
 
-    // Carousel Effect
+    // Carousel Effect in Home
     // const carousel = document.querySelector(".carousel");
     const images = document.querySelectorAll(".carousel-img");
     let currentIndex = 0;
@@ -209,7 +210,8 @@
     //   });
     // });
 
-    // Toggle button for floating button
+
+    // Action Button
 
     const floatButton = document.querySelector(".float-button");
     const floatButtons = document.querySelector(".float-buttons");
@@ -226,7 +228,7 @@
       }
     });
 
-    // Close the floating buttons and reset background when clicking outside
+    // Close the Action buttons and reset background when clicking outside
     document.addEventListener("click", (event) => {
       if (
         !floatButton.contains(event.target) &&
