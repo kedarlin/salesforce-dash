@@ -112,6 +112,7 @@ body {
     z-index: 10;
     font-size: 16px;
     transform: scale(1.15);
+    transform-origin: left;
 }
 .float-button {
     border: none;
@@ -164,6 +165,7 @@ body {
 
 .carousel-img {
     min-width: 100vw;
+    transition: transform 2s ease-in;
     /* transform: 1s; */
     /* object-fit: cover; */
     height: 100vh;
