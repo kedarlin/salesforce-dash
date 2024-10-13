@@ -262,41 +262,7 @@
                         <i class="material-icons dropdown-head-crop-icon">crop_free</i>
                     </div>
                     <div class="dropdown-body">
-                        <table class="dropdown-table">
-                            <tr>
-                                <th>Target</th>
-                                <th>Planned</th>
-                                <th>Actual</th>
-                                <th>Incentive</th>
-                            </tr>
-                            <tr>
-                                <td>KP 1</td>
-                                <td>3000</td>
-                                <td>100</td>
-                                <td>20</td>
-                            </tr>
-                            <tr>
-                                <td>KP 1</td>
-                                <td>3000</td>
-                                <td>100</td>
-                                <td>20</td>
-                            </tr>
-                            <tr>
-                                <td>KP 1</td>
-                                <td>3000</td>
-                                <td>100</td>
-                                <td>20</td>
-                            </tr>
-                            <tr>
-                                <td>KP 1</td>
-                                <td>3000</td>
-                                <td>100</td>
-                                <td>20</td>
-                            </tr>
-                        </table>
-                        <button class="dropdown-button">
-                            More
-                        </button>
+                        
                     </div>
                 </div>
             </div>
@@ -311,6 +277,7 @@
                 const dropdownHead = dropdown.querySelector(".dropdown-head");
                 const dropdownBody = dropdown.querySelector(".dropdown-body");
                 const arrowIcon = dropdownHead.querySelector(".dropdown-head-nav-icon");
+                const dropdownTitle = dropdownHead.querySelector(".dropdown-head-title");
                 
                 dropdownHead.addEventListener("click", function () {
                     dropdownBody.classList.toggle("active");
@@ -318,9 +285,11 @@
                     if (dropdownBody.classList.contains("active")) {
                         dropdownBody.style.maxHeight = dropdownBody.scrollHeight + "px";
                         arrowIcon.textContent = "keyboard_arrow_up";
+                        dropdownTitle.style.color = "#000";
                     } else {
                         dropdownBody.style.maxHeight = 0;
                         arrowIcon.textContent = "keyboard_arrow_down";
+                        dropdownTitle.style.color = "#545454";
                     }
                 });
             });
