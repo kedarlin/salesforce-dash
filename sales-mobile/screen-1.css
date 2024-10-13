@@ -5,7 +5,13 @@ h4, body{
     display: flex;
     flex-direction: column;
     background-image: url('screen-1-bg.png');
-    /* height: 100vh; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .screen-bar{
