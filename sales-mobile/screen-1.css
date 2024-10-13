@@ -30,7 +30,8 @@ h4, h6, body{
     gap: 10px;
 }
 .screen-bar-title{
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 16px;
 }
 .screen-bar-nav-icon{
     background-color: #fff;
@@ -107,15 +108,17 @@ h4, h6, body{
     align-items: center;
     background-color: #fff;
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 .search-bar-icon{
     scale: 0.8;
     color: #c3c3c3;
 }
 .search-bar-input{
-    border: none;
+    all: unset;
+    margin-left: 5px;
     color: #c3c3c3;
+    font-size: 12px;
 }
 
 .dropdowns{
@@ -146,7 +149,7 @@ h4, h6, body{
     gap: 10px;
 }
 .dropdown-head-title{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 550;
 }
 .dropdown-head-nav-icon{
@@ -167,19 +170,26 @@ h4, h6, body{
     width: 100%;
     font-size: 12px;
     text-align: left;
-    padding: 25px;
-    border: collapse;
-}
-th, td{
+    padding: 15px 25px 25px 25px;
     border: none;
+    border-spacing: 0px;
 }
 th{
-    font-weight: 500;
+    font-weight: 450;
     font-size: 14px;
+    padding: 10px 0;
+}
+td{
     padding: 5px 0;
 }
 .dropdown-table tr:nth-child(1) th{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #CECECE;
+}
+.dropdown-table tr:nth-child(2) td{
+    padding-top: 10px;
+}
+.dropdown-table th:nth-child(1), .dropdown-table td:nth-child(1){
+    width: 30%;
 }
 .dropdown-button{
     background-color: #2f5597;
