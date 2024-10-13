@@ -1,4 +1,4 @@
-h4, body{
+h4, h6, body{
     margin: 0;
 }
 .screen-1{
@@ -50,6 +50,7 @@ h4, body{
     align-items: center;
     background-color: #fff;
     padding: 10px 25px;
+    position: relative;
 }
 .nav-title{
     color: #fff;
@@ -57,6 +58,39 @@ h4, body{
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 14px;
+    font-weight: 500;
+}
+.nav-menu{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 10px 20px;
+    flex-direction: column;
+    background-color: #fff;
+    color: #404040;
+    font-weight: 400;
+    /* display: none; */
+    left: -120%;
+    transition: 0.5s ease-in-out;
+}
+.menu-head, .menu-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+}
+.menu-head{
+    margin-bottom: 20px;
+}
+.menu-title{
+    font-weight: 500;
+    margin-left: 10px;
+}
+.menu-icon{
+    scale: 0.9;
 }
 .screen-1-body{
     padding: 10px;
@@ -90,7 +124,7 @@ h4, body{
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
 }
 .dropdown-head{
@@ -131,15 +165,20 @@ h4, body{
     font-size: 12px;
     text-align: left;
     padding: 25px;
+    border: collapse;
+}
+th, td{
+    border: none;
 }
 th{
     font-weight: 500;
     font-size: 14px;
     padding: 5px 0;
 }
-.dropdown-table tr:nth-child(1){
-    border: 1px solid #ccc;
+.dropdown-table tr:nth-child(1) th{
+    border-bottom: 1px solid #000;
 }
+.dropdown-table 
 .dropdown-button{
     background-color: #2f5597;
     width: 100%;

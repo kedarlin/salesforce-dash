@@ -16,8 +16,48 @@
             <i class="material-icons screen-bar-refresh-icon">refresh</i>
         </div>
         <div class="navbar">
-            <i class="material-icons navbar-icon">menu</i>
+            <i class="material-icons navbar-icon menu-open">menu</i>
             <h4 class="nav-title">Day end</h4>
+            <div class="nav-menu">
+                <div class="menu-head">
+                    <i class="material-icons navbar-icon menu-close">close</i>
+                    <h4 class="menu-title">Menu</h4>
+                </div>
+    
+    
+                <div class="menu-items">
+                    <i class="material-icons menu-icon">home</i>
+                    <h6 class="menu-title">My Home</h6>
+                </div>
+                <div class="menu-items">
+                    <i class="material-icons menu-icon">warehouse</i>
+                    <h6 class="menu-title">Outlets</h6>
+                </div>
+                <div class="menu-items">
+                    <i class="material-icons menu-icon">sync</i>
+                    <h6 class="menu-title">Sync data</h6>
+                </div>
+                <div class="menu-items">
+                    <i class="material-icons menu-icon">inventory_2</i>
+                    <h6 class="menu-title">Products</h6>
+                </div>
+                <div class="menu-items">
+                    <i class="material-icons menu-icon">event_available</i>
+                    <h6 class="menu-title">Orders</h6>
+                </div>
+                <div class="menu-items">
+                    <i class="material-icons menu-icon">assignment_return</i>
+                    <h6 class="menu-title">Returns</h6>
+                </div>
+                <div class="menu-items">
+                    <i class="material-icons menu-icon">info</i>
+                    <h6 class="menu-title">Info</h6>
+                </div>
+                <div class="menu-items">
+                    <i class="material-icons menu-icon">logout</i>
+                    <h6 class="menu-title">Logout</h6>
+                </div>
+            </div>
         </div>
 
 
@@ -265,25 +305,38 @@
   </body>
   <script>
         document.addEventListener("DOMContentLoaded", function () {
-        const dropdowns = document.querySelectorAll(".dropdown");
-
-        dropdowns.forEach((dropdown) => {
-            const dropdownHead = dropdown.querySelector(".dropdown-head");
-            const dropdownBody = dropdown.querySelector(".dropdown-body");
-            const arrowIcon = dropdownHead.querySelector(".dropdown-head-nav-icon");
-
-            dropdownHead.addEventListener("click", function () {
-            dropdownBody.classList.toggle("active");
-
-            if (dropdownBody.classList.contains("active")) {
-                dropdownBody.style.maxHeight = dropdownBody.scrollHeight + "px";
-                arrowIcon.textContent = "keyboard_arrow_up";
-            } else {
-                dropdownBody.style.maxHeight = 0;
-                arrowIcon.textContent = "keyboard_arrow_down";
-            }
+            const dropdowns = document.querySelectorAll(".dropdown");
+            
+            dropdowns.forEach((dropdown) => {
+                const dropdownHead = dropdown.querySelector(".dropdown-head");
+                const dropdownBody = dropdown.querySelector(".dropdown-body");
+                const arrowIcon = dropdownHead.querySelector(".dropdown-head-nav-icon");
+                
+                dropdownHead.addEventListener("click", function () {
+                    dropdownBody.classList.toggle("active");
+                    
+                    if (dropdownBody.classList.contains("active")) {
+                        dropdownBody.style.maxHeight = dropdownBody.scrollHeight + "px";
+                        arrowIcon.textContent = "keyboard_arrow_up";
+                    } else {
+                        dropdownBody.style.maxHeight = 0;
+                        arrowIcon.textContent = "keyboard_arrow_down";
+                    }
+                });
             });
-        });
+            
+            const menuOpen = document.querySelector(".menu-open");
+            const menuClose = document.querySelector(".menu-close");
+            const menuBar = document.querySelector(".nav-menu");
+            
+            
+            menuOpen.addEventListener("click", function(){
+                menuBar.style.left = "0%";
+            });
+
+            menuClose.addEventListener("click", function(){
+                menuBar.style.left = "-120%";
+            });
         });
 
   </script>
