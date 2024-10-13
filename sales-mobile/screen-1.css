@@ -60,6 +60,9 @@ h4, h6, body{
     font-size: 14px;
     font-weight: 500;
 }
+.menu-open, .menu-close{
+    cursor: pointer;
+}
 .nav-menu{
     position: absolute;
     z-index: 10;
