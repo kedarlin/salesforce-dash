@@ -200,3 +200,80 @@ td{
     font-size: 14px;
     padding: 10px;
 }
+.customer{
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.customer-feedback{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: #2F5597;
+}
+.customer-profile{
+    width: 60px;
+    height: 60px;
+}
+.customer-title{
+    padding: 5px 0;
+}
+.customer-phone{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.customer-phone-icon{
+    padding: 5px;
+    border: 2px solid #e3e3e3;
+    border-radius: 50%;
+}
+.customer-medal{
+    padding: 5px 0;
+    margin-right: 0;
+    margin-left: auto;
+    height: 50px;
+    width: 50px;
+}
+
+.expenses{
+    padding: 15px 24px;
+}
+.expenses-title{
+    padding: 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #cecece;
+    margin-bottom: 20px;
+}
+.expenses-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.expenses-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    gap: 50px;
+}
+.expenses-col-2{
+    color: #2F5597;
+}
+.expenses-date{
+    font-size: 14px;
+    color: #2F5597;
+    background-color: #e9ecf4;
+    padding: 5px;
+    margin-top: 20px;
+}
+.expenses-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+}
