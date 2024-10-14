@@ -58,6 +58,7 @@
                     <h6 class="menu-title">Logout</h6>
                 </div>
             </div>
+            <div class="menu-bg"></div>
         </div>
 
 
@@ -440,14 +441,17 @@
             const menuOpen = document.querySelector(".menu-open");
             const menuClose = document.querySelector(".menu-close");
             const menuBar = document.querySelector(".nav-menu");
+            const menuBg = document.querySelector(".menu-bg");
             
             
             menuOpen.addEventListener("click", function(){
                 menuBar.style.left = "0%";
+                menuBg.style.display = "block";
             });
 
             menuClose.addEventListener("click", function(){
                 menuBar.style.left = "-120%";
+                menuBg.style.display = "none";
             });
             //page layout changes
     
