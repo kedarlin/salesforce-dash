@@ -290,6 +290,7 @@ td{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    max-width: 33%;
 }
 .route-outlets{
     display: flex;
@@ -310,7 +311,6 @@ td{
     gap: 10px;
 }
 .filter-route, .filter-date{
-    /* width: 80%; */
     all: unset;
     padding: 5px;
     border: #c3c3c3 solid 1px;
