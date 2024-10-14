@@ -31,7 +31,7 @@ h4, h6, body{
 }
 .screen-bar-title{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
 }
 .screen-bar-nav-icon{
     background-color: #fff;
@@ -58,7 +58,7 @@ h4, h6, body{
     background-color: #2f5597;
     padding: 5px 15px;
     border-radius: 15px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
 }
 .menu-open, .menu-close{
@@ -118,7 +118,7 @@ h4, h6, body{
     all: unset;
     margin-left: 5px;
     color: #c3c3c3;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .dropdowns{
@@ -198,26 +198,34 @@ td{
     border: none;
     color: #fff;
     font-size: 14px;
+    font-weight: 450;
     padding: 10px;
 }
 .customer{
-    padding: 20px 15px;
+    padding: 10px 15px 20px 15px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    /* gap: 30px; */
 }
 .customer-feedback{
+    padding: 15px 0 10px 0;
     display: flex;
     flex-direction: row;
     gap: 20px;
     color: #2F5597;
+    border-bottom: #c3c3c3 1px solid;
+}
+.customer-feedback:nth-last-child(1){
+    border: none;
 }
 .customer-profile{
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
 }
 .customer-title{
+    font-size: 20px;
     padding: 5px 0;
+    font-weight: 500;
 }
 .customer-phone{
     margin-top: 15px;
@@ -227,16 +235,18 @@ td{
     gap: 20px;
 }
 .customer-phone-icon{
-    padding: 5px;
+    padding: 10px;
+    height: 24px;
     border: 2px solid #e3e3e3;
     border-radius: 50%;
 }
 .customer-medal{
-    padding: 5px 0;
+    /* padding: 10px 0; */
+    align-self: center;
     margin-right: 0;
     margin-left: auto;
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
 }
 
 .custom-select {
@@ -283,6 +293,7 @@ td{
 .route-filters{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
@@ -290,7 +301,8 @@ td{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    max-width: 33%;
+    max-width: 30%;
+    font-size: 14px;
 }
 .route-outlets{
     display: flex;
@@ -303,7 +315,7 @@ td{
     justify-content: space-between;
     align-items: center;
     border-bottom: #c3c3c3 1px solid;
-    padding: 5px 0;
+    padding: 8px 10px;
 }
 .route-left{
     display: flex;
@@ -312,9 +324,10 @@ td{
 }
 .filter-route, .filter-date{
     all: unset;
-    padding: 5px;
+    padding: 4px 8px;
     border: #c3c3c3 solid 1px;
     background-color: #fff;
+    color: #3f3f3f;
     font-size: 14px;
     height: 18px;
 }
@@ -326,7 +339,7 @@ td{
     color: #2F5597;
 }
 .custom-dropbtn {
-    padding: 5px 15px;
+    padding: 4px 8px 4px 10px;
     font-size: 14px;
     height: 18px;
     display: flex;
@@ -365,7 +378,7 @@ td{
     padding: 15px 24px;
 }
 .expenses-title{
-    padding: 10px 0;
+    padding: 0px 0 10px 0;
     font-size: 16px;
     border-bottom: 1px solid #cecece;
     margin-bottom: 20px;
@@ -390,7 +403,7 @@ td{
     font-size: 14px;
     color: #2F5597;
     background-color: #e9ecf4;
-    padding: 5px;
+    padding: 5px 7px;
     margin-top: 20px;
 }
 .expenses-row{
