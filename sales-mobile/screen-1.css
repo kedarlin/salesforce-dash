@@ -343,6 +343,12 @@ td{
     font-size: 14px;
     height: 18px;
 }
+.route-filter-title{
+    display: flex;
+    flex-direction: row;
+    align-items: bottom;
+    gap: 5px;
+}
 .custom-route-filter {
     position: relative;
     display: flex;
