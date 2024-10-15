@@ -194,8 +194,9 @@ h4, h6, body{
 }
 .task-input{
     all: unset;
-    max-width: 40px;
+    width: 30px;
     height: 30px;
     border: 1px solid #2f5597;
     border-radius: 5px;
+    padding: 0 5px;
 }
