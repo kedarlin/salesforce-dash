@@ -335,7 +335,6 @@ td{
     gap: 5px;
     /* max-width: 30%; */
     font-size: 14px;
-    width: 100%;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
@@ -368,7 +367,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 14px;
     height: 18px;
     border-radius: 15px;
-    width: 90%;
 }
 .route-filter-title{
     display: flex;
