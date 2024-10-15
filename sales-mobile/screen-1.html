@@ -18,9 +18,19 @@
         <div class="navbar">
             <i class="material-icons navbar-icon menu-open">menu</i>
             <h4 class="nav-title">
-                <!-- <i class="material-icons navbar-icon">line_end</i> -->
+                <img src="screen-1-dayend.png" class="nav-icon-img" alt="nav-dayend" />
                 Day end
             </h4>
+            <div class="nav-titles">
+                <h4 class="nav-title">
+                    <i class="material-icons nav-icon-img" style="font-size: 16px;">power_settings_new</i>
+                    Start
+                </h4>
+                <h4 class="nav-title">
+                    <i class="material-icons nav-icon-img" style="font-size: 16px;">check_circle</i>
+                    Complete
+                </h4>
+            </div>
             <div class="nav-menu">
                 <div class="menu-head">
                     <i class="material-icons navbar-icon menu-close">close</i>
@@ -359,16 +369,18 @@
                         </div>
                         <div class="route-filter">
                             <div class="route-filter-title">
-                                Date
                                 <i class="material-icons filter-icons" style="font-size: 16px;">calendar_month</i>
+                                Date
                             </div>
                             <input type="date" class="filter-date" value="2024-10-01"/>
                         </div>
                         <div class="custom-route-filter">
                             <div class="route-filter-title" style="color: #fff;">Filter</div>
                             <div class="custom-dropbtn" onclick="toggleDropdown()">
-                                <span id="selected-item">Days</span>
-                                <img src="screen-1-24.png" width="15" height="15">
+                                <span id="selected-item">
+                                    Days
+                                    <img src="screen-1-24.png" width="15" height="15">
+                                </span>
                                 <i class="material-icons">keyboard_arrow_down</i>
                             </div>
                             <div class="custom-dropdown-content" id="dropdown-content">
@@ -378,11 +390,11 @@
                                 </div>
                                 <div class="custom-dropdown-items" onclick="selectItem('Weeks', 'screen-1-week.png')">
                                     Weeks
-                                    <img src="screen-1-week.png" width="20" height="15">
+                                    <img src="screen-1-week.png" width="15" height="15">
                                 </div>
                                 <div class="custom-dropdown-items" onclick="selectItem('Years', 'screen-1-year.png')">
                                     Years
-                                    <img src="screen-1-year.png" width="20" height="15">
+                                    <img src="screen-1-year.png" width="15" height="15">
                                 </div>
                             </div>
                         </div>
@@ -417,6 +429,30 @@
                             <i class="material-icons outlet-icon" alt="outlet-icon">more_vert</i>
                         </div>
                     </div>
+                    <div class="popup" id="popup">
+                        <ul>
+                            <li>
+                                <i class="material-icons">play_arrow</i>
+                                Execute
+                            </li>
+                            <li>
+                                <i class="material-icons">disabled_by_default</i>
+                                Cancel
+                            </li>
+                            <li>
+                                <i class="material-icons" style="color: #d9d9d9;">circle</i>
+                                Reschedule
+                            </li>
+                            <li>
+                                <i class="material-icons" style="color: #d9d9d9;">circle</i>
+                                Complete
+                            </li>
+                            <li>
+                                <i class="material-icons" style="color: #d9d9d9;">circle</i>
+                                Navigate
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -446,6 +482,27 @@
                     }
                 });
             });
+
+            const outletsMore = document.querySelectorAll(".outlet-icon");
+            const popup = document.getElementById("popup");
+
+            outletsMore.forEach((icon) => {
+                icon.addEventListener("click", (event) => {
+                    const rect = icon.getBoundingClientRect();
+                    
+                    popup.style.right = "30px";
+                    popup.style.top = `${rect.bottom}px`;
+                    
+                    popup.style.display = popup.style.display === "block" ? "none" : "block";
+                });
+            });
+            
+            document.addEventListener("click", (event) => {
+                if (!popup.contains(event.target) && !event.target.classList.contains("outlet-icon")) {
+                    popup.style.display = "none";
+                }
+            });
+
             
             const menuOpen = document.querySelector(".menu-open");
             const menuClose = document.querySelector(".menu-close");
@@ -471,12 +528,18 @@
             const homeLayout = document.querySelector(".home");
             const outletsLayout = document.querySelector(".outlets");
             const ordersLayout = document.querySelector(".orders");
+
+            const navTitles = document.querySelector(".nav-titles");
+            const navTitle = document.querySelector(".nav-title");
     
             ordersButton.addEventListener("click", function(){
                 ordersLayout.style.display = "block";
                 homeLayout.style.display = "none";
                 outletsLayout.style.display = "none";
                 menuBar.style.left = "-120%";
+                menuBg.style.display = "none";
+                navTitles.style.display = "none"
+                navTitle.style.display = "flex";
             });
     
             homeButton.addEventListener("click", function(){
@@ -484,6 +547,9 @@
                 ordersLayout.style.display = "none";
                 outletsLayout.style.display = "none";
                 menuBar.style.left = "-120%";
+                menuBg.style.display = "none";
+                navTitles.style.display = "none";
+                navTitle.style.display = "flex";
             });
 
             outletsButton.addEventListener("click", function(){
@@ -491,6 +557,9 @@
                 homeLayout.style.display = "none";
                 ordersLayout.style.display = "none";
                 menuBar.style.left = "-120%";
+                menuBg.style.display = "none";
+                navTitles.style.display = "flex";
+                navTitle.style.display = "none";
             });
         });
 
@@ -503,11 +572,10 @@
 
         function selectItem(text, imgSrc) {
             const selectedItem = document.getElementById('selected-item');
-            selectedItem.innerHTML = `${text} <img src="${imgSrc}" width="20" height="15">`;
-            toggleDropdown(); // Close the dropdown after selecting an item
+            selectedItem.innerHTML = `${text} <img src="${imgSrc}" width="15" height="15">`;
+            toggleDropdown();
         }
 
-        // Optional: Close the dropdown if the user clicks outside of it
         window.onclick = function(event) {
             const dropdown = document.getElementById('dropdown-content');
             const dropbtn = document.querySelector('.custom-dropbtn');
