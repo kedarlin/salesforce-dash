@@ -53,28 +53,6 @@ h4, h6, body{
     padding: 10px 25px;
     position: relative;
 }
-.nav-titles{
-    display: none;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-.nav-title{
-    color: #fff;
-    background-color: #2f5597;
-    padding: 6px 16px;
-    border-radius: 15px;
-    font-size: 16px;
-    font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-}
-.nav-icon-img{
-    height: 16px;
-    width: 16px;
-}
 
 .menu-open, .menu-close{
     cursor: pointer;
@@ -118,8 +96,9 @@ h4, h6, body{
     margin-bottom: 20px;
 }
 .menu-title{
-    font-weight: 500;
+    font-weight: 400;
     margin-left: 10px;
+    font-size: 16px;
 }
 .menu-icon{
     scale: 0.9;
@@ -150,6 +129,7 @@ h4, h6, body{
     background-color: #fff;
     padding: 5px;
     border-radius: 20px;
+    width: 100%;
 }
 .search-bar-icon{
     scale: 0.8;

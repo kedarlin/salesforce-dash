@@ -72,8 +72,8 @@ h4, h6, body{
     gap: 4px;
 }
 .nav-icon-img{
-    height: 16px;
-    width: 16px;
+    height: 18px;
+    width: 18px;
 }
 
 .menu-open, .menu-close{
@@ -118,8 +118,9 @@ h4, h6, body{
     margin-bottom: 20px;
 }
 .menu-title{
-    font-weight: 500;
+    font-weight: 400;
     margin-left: 10px;
+    font-size: 16px;
 }
 .menu-icon{
     scale: 0.9;
@@ -187,6 +188,7 @@ h4, h6, body{
 }
 .dropdown-head-crop-icon{
     padding: 5px;
+    color: #2F5597;
 }
 .dropdown-body{
     max-height: 0;
@@ -205,12 +207,13 @@ h4, h6, body{
     border-spacing: 0px;
 }
 th{
-    font-weight: 450;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 16px;
     padding: 10px 0;
 }
 td{
     padding: 5px 0;
+    color: #191919;
 }
 .dropdown-table tr:nth-child(1) th{
     border-bottom: 1px solid #CECECE;
@@ -324,15 +327,20 @@ td{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 .route-filter{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    max-width: 30%;
+    /* max-width: 30%; */
     font-size: 14px;
+    width: 100%;
 }
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+  
 .route-outlets{
     display: flex;
     flex-direction: column;
@@ -359,12 +367,13 @@ td{
     background-color: #f0f0f0;
     font-size: 14px;
     height: 18px;
-    /* width: 80%; */
+    border-radius: 15px;
+    width: 90%;
 }
 .route-filter-title{
     display: flex;
     flex-direction: row;
-    align-items: bottom;
+    align-items: center;
     gap: 5px;
 }
 .custom-route-filter {
@@ -430,6 +439,7 @@ td{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: #191919;
 }
 .expenses-col{
     display: flex;
@@ -453,7 +463,7 @@ td{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 .orders{
