@@ -168,8 +168,8 @@ h4, h6, body{
     gap: 10px;
 }
 .tasks{
-    margin: 5px;
     border-radius: 5px;
+    overflow: hidden;
     background-color: #fff;
     display: flex;
     flex-direction: column;
