@@ -351,12 +351,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: space-between;
     align-items: center;
     border-bottom: #c3c3c3 1px solid;
-    padding: 8px 10px;
+    padding: 10px;
 }
 .route-left{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.outlet-title{
+    font-size: 16px;
+}
+.outlet-date{
+    color: #191919;
+    font-size: 14px;
 }
 .filter-route, .filter-date{
     all: unset;
