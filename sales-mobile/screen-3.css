@@ -179,6 +179,7 @@ h4, h6, body{
     border: 1px solid #2f5597;
     border-radius: 5px;
     padding: 0 5px;
+    text-align: center;
 }
 .screen-3-bottom-bar{
     position: absolute;
