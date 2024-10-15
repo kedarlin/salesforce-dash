@@ -233,16 +233,20 @@
                 menuBg.style.display = "none";
             });
         });
-        const incrementBtn = document.querySelector('.increment');
-        const decrementBtn = document.querySelector('.decrement');
-        const inputField = document.querySelector('.task-input');
+        
+        document.querySelectorAll('.task-inputs').forEach(task => {
+            const incrementBtn = task.querySelector('.increment');
+            const decrementBtn = task.querySelector('.decrement');
+            const inputField = task.querySelector('.task-input');
 
-        incrementBtn.addEventListener('click', () => {
-            inputField.value = parseInt(inputField.value) + 1;
+            incrementBtn.addEventListener('click', () => {
+                inputField.value = parseInt(inputField.value) + 1;
+            });
+
+            decrementBtn.addEventListener('click', () => {
+                inputField.value = Math.max(0, parseInt(inputField.value) - 1); // Prevents going below 0
+            });
         });
 
-        decrementBtn.addEventListener('click', () => {
-            inputField.value = Math.max(0, parseInt(inputField.value) - 1);
-        });
   </script>
 </html>
