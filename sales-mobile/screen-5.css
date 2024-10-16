@@ -20,7 +20,8 @@ h4, h6, body{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #b8dffb;
+    background-color: #ffffff7c;
+    backdrop-filter: blur(4px);
 }
 .screen-bar-left{
     display: flex;
@@ -157,6 +158,8 @@ h4, h6, body{
 }
 .task-price{
     color: #2f5597;
+    margin-left: auto;
+    margin-right: 24px;
 }
 .task-inputs i{
     color: #2f5597;

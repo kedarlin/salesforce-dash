@@ -20,7 +20,8 @@ h4, h6, body{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #b8dffb;
+    background-color: #ffffff7c;
+    backdrop-filter: blur(4px);
 }
 .screen-bar-left{
     display: flex;
@@ -420,6 +421,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: flex;
     flex-direction: row;
     justify-content: right;
+    align-items: center;
     gap: 5px;
 }
 .custom-dropdown-items:hover {
@@ -464,7 +466,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 14px;
     color: #2F5597;
     background-color: #e9ecf4;
-    padding: 5px 7px;
+    padding: 10px;
     margin-top: 20px;
 }
 .expenses-row{
