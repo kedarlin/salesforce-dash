@@ -95,7 +95,7 @@ h4, h6, body{
     /* display: none; */
     left: -120%;
     transition: 0.3s ease-out;
-    box-shadow:rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 24px;
 }
 .menu-bg{
     position: absolute;
@@ -408,7 +408,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     left: 0;
     background-color: #fff;
     min-width: auto;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 24px;
     z-index: 20;
     border-radius: 5px;
     padding: 5px;
@@ -493,7 +493,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     background-color: #fff;
     min-width: auto;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 24px;
     z-index: 20;
     border-radius: 5px;
 }
